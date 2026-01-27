@@ -1,0 +1,73 @@
+body {
+    background: repeating-linear-gradient(
+        45deg,
+        #000080,
+        #000080 20px,
+        #0000cd 20px,
+        #0000cd 40px
+    );
+    color: yellow;
+    font-family: "Comic Sans MS", "Arial", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: linear-gradient(to right, red, orange, yellow, lime, cyan, blue, violet);
+    border-bottom: 5px ridge white;
+    padding: 20px;
+}
+header h1 {
+    font-size: 48px;
+    color: white;
+    text-shadow: 3px 3px 0 black;
+}
+main {
+    background-color: black;
+    border: 5px dashed lime;
+    margin: 40px auto;
+    padding: 20px;
+    width: 70%;
+    font-size: 20px;
+    box-shadow: 0 0 20px red;
+}
+main::after {
+    content: " ★ SO TUFF 💗 ★ ";
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { color: red; }
+    50% { color: yellow; }
+    100% { color: red; }
+}
+
+/* Obrazek gif */
+img {
+    margin-top: 30px;
+    border: 10px groove hotpink;
+    width: 300px;
+}
+
+/* Kursory (jeśli przeglądarka pozwoli) */
+body {
+    cursor: crosshair;
+}
+li{
+    list-style: none;
+}
+#choroszcz::after{
+    content: " CHOROSZCZY";
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    animation: mrug 20ms infinite;
+}
+@keyframes mrug {
+    0% {color: blue;}
+    50% {color: red;}
+    100% {color: yellow;}
+}
