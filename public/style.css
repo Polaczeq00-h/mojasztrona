@@ -60,7 +60,7 @@ li{
     list-style: none;
 }
 #choroszcz::after{
-    content: " CHOROSZCZY";
+    content: "CHOROSZCZY";
     display: block;
     margin-top: 20px;
     font-weight: bold;
@@ -70,4 +70,50 @@ li{
     0% {color: blue;}
     50% {color: red;}
     100% {color: yellow;}
+}
+.btn-geo {
+    font-family: "Comic Sans MS", Arial, sans-serif;
+    font-size: 24px;
+    padding: 15px 30px;
+    color: yellow;
+    background: linear-gradient(
+        to bottom,
+        red,
+        orange,
+        yellow,
+        lime,
+        cyan
+    );
+    border: 6px ridge hotpink;
+    cursor: crosshair;
+    text-shadow: 2px 2px 0 black;
+    box-shadow: 0 0 15px red;
+    animation: epilepsja 0.3s infinite;
+}
+
+/* hover = jeszcze gorzej */
+.btn-geo:hover {
+    background: linear-gradient(
+        to bottom,
+        cyan,
+        lime,
+        yellow,
+        orange,
+        red
+    );
+    box-shadow: 0 0 25px lime;
+}
+
+/* klik = zapada się jak guzik w windzie */
+.btn-geo:active {
+    border-style: inset;
+    transform: translateY(2px);
+}
+
+/* miganie jak choinka */
+@keyframes epilepsja {
+    0%   { box-shadow: 0 0 10px red; }
+    20%  { box-shadow: 0 0 20px yellow; }
+    40% { box-shadow: 0 0 30px blue; }
+    100% { box-shadow: 0 0 10px red; }
 }
